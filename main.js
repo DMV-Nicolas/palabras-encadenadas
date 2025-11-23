@@ -79,7 +79,7 @@ const getRandomPrefix = (
     const isValidStart = Math.random() <= probability
 
     if (isValidStart) {
-      DOM.count.textContent = `Total: ${count}`
+      DOM.count.textContent = `Posibilidades: ${count}`
       return { prefix: suffix, difficulty }
     }
     currentDifficulty -= CONFIG.DIFFICULTY_STEP
