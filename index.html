@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palabras Encadenadas</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <main class="game-container">
+      <header class="game-header">
+        <h1>Palabras Encadenadas</h1>
+        <div class="status-bar">
+          <div id="timer"></div>
+          <div id="count"></div>
+        </div>
+      </header>
+
+      <div class="input-area">
+        <div class="input-wrapper">
+          <input type="text" id="word" autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+      <div id="fails"></div>
+
+      <div class="history-container">
+        <h3>Historial</h3>
+        <ul id="wordsUsed" class="word-list"></ul>
+      </div>
+    </main>
+    <div id="startModal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>¡Bienvenido al Juego de Palabras!</h2>
+        <p>
+          Escribe palabras que empiecen con el prefijo indicado antes de que se
+          acabe el tiempo.
+        </p>
+        <button id="startBtnEs" class="modal-btn">Jugar en Español</button>
+        <button id="startBtnEn" class="modal-btn">Jugar en Ingles</button>
+      </div>
+    </div>
+
+    <div id="endModal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <h2 id="endTitle">Juego Terminado</h2>
+        <p>Tu puntaje final:</p>
+        <div id="finalScore" class="score-text">0</div>
+        <button id="restartBtnEs" class="modal-btn">Jugar en Español</button>
+        <button id="restartBtnEn" class="modal-btn">Jugar en Ingles</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
